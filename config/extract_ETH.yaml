@@ -1,0 +1,24 @@
+gpu: [0]
+
+model:
+  pretrained: true
+  pretrained_path: "../checkpoints/PG2SD.pt"
+
+data:
+  images: local_mapping/local_feature_evaluation/ETH_local_feature/ETH_dataset/Gendarmenmarkt/images
+
+multiscale:
+  scale_f: 1.189207
+  min_scale: 0.3
+  max_scale: 1.0
+  min_size: 0
+  max_size: 9999
+  verbose: true
+
+nms:
+  reliability_thr: 0.7
+  repeatability_thr: 0.7
+
+output:
+  tag: PG2SD
+  top_k: 30000

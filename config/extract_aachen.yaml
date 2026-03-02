@@ -1,0 +1,41 @@
+gpu: [0]
+
+model:
+  pretrained: true
+  pretrained_path: "../checkpoints/PG2SD.pt"
+
+data:
+  images: local_mapping/local_feature_evaluation/aachen/data/images/images_upright
+  seq_paths:
+    - db
+    - query/day/nexus4
+    - query/day/nexus5x
+    - query/day/milestone
+    - query/night/milestone
+    - query/night/nexus5x
+    - query/night/nexus5x_additional_night
+    - sequences/gopro3_undistorted
+    - sequences/nexus4_sequences/sequence_1
+    - sequences/nexus4_sequences/sequence_2
+    - sequences/nexus4_sequences/sequence_3
+    - sequences/nexus4_sequences/sequence_4
+    - sequences/nexus4_sequences/sequence_5
+    - sequences/nexus4_sequences/sequence_6
+    - sequences/nexus4_sequences/sequence_7
+    - sequences/nexus4_sequences/sequence_8
+
+multiscale:
+  scale_f: 1.189207
+  min_scale: 0.5
+  max_scale: 1.0
+  min_size: 0
+  max_size: 9999
+  verbose: true
+
+nms:
+  reliability_thr: 0.8
+  repeatability_thr: 0.8
+
+output:
+  tag: PG2SD
+  top_k: 30000

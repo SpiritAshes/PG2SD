@@ -1,0 +1,17 @@
+# 图像处理配置
+img: "./test_images/0784.jpg"  # 输入图像路径
+resize: 512  # 图像缩放大小
+out: "output.png"  # 输出图像路径
+
+# 关键点检测配置
+max_kpts: 1000  # 最大关键点数量
+reliability_thr: 0.9  # 可靠性阈值
+repeatability_thr: 0.9  # 可重复性阈值
+border: 16  # 边界大小（去除靠近边界的关键点）
+
+# GPU 配置
+gpu: [0]  # 使用的 GPU ID，-1 表示使用 CPU
+
+# 其他配置
+pretrained: True  # 是否加载预训练模型
+pretrained_path: "./checkpoints/gradient_smooth_distillation.pt"  # 预训练模型路径

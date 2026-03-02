@@ -1,0 +1,20 @@
+gpu: [0]
+
+model:
+  pretrained: true
+  pretrained_path: "../checkpoints/PG2SD.pt"
+
+extract:
+  images: 'image_list_hpatches_sequences.txt'
+  tag: PG2SD
+
+  top_k: 4500
+
+  scale_f: 1.189207
+  min_size: 0
+  max_size: 9999
+  min_scale: 0.5
+  max_scale: 1.0
+
+  reliability_thr: 0.9
+  repeatability_thr: 0.9
