@@ -1,4 +1,9 @@
+import sys
 import os
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+sys.path.insert(0, parent_dir) 
+
 import yaml
 from PIL import Image
 import numpy as np
@@ -186,5 +191,6 @@ if __name__ == "__main__":
 
     with open('../config/extract.yaml', "r") as f:
         config = yaml.safe_load(f)
+
 
     extract_keypoints(config)
