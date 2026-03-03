@@ -45,7 +45,7 @@ class NonMaxSuppression (torch.nn.Module):
     
 if __name__ == '__main__':
     # 加载配置文件
-    with open('./config/test_config.yaml', 'r', encoding='utf-8') as file:
+    with open('./config/test.yaml', 'r', encoding='utf-8') as file:
         config = yaml.safe_load(file)
 
     # 设置 GPU
@@ -120,4 +120,5 @@ if __name__ == '__main__':
 
     pl.gcf().set_size_inches(9, 2.73)
     pl.subplots_adjust(0.01, 0.01, 0.99, 0.99, hspace=0.1)
+
     pl.savefig(config['out'])
