@@ -14,4 +14,5 @@ gpu: [0]  # 使用的 GPU ID，-1 表示使用 CPU
 
 # 其他配置
 pretrained: True  # 是否加载预训练模型
-pretrained_path: "./checkpoints/gradient_smooth_distillation.pt"  # 预训练模型路径
+
+pretrained_path: "./checkpoints/PG2SD.pt"  # 预训练模型路径
